@@ -9,7 +9,7 @@ Check it out [here](https://www.playframework.com/documentation/2.5.x/Installing
 
 ## Instrallation 
 ```
-git clone https://github.com/Adacchi3/sparql-webapi-example.git
+$git clone https://github.com/Adacchi3/sparql-webapi-example.git
 ```
 
 ## Quick Start
