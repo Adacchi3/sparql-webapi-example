@@ -24,6 +24,12 @@ $sbt run
 ```
 link to [http://localhost:9000](http://localhost:9000)
 
+### SPARQL Querying 
+```
+GET /api/sparql controllers.SPARQLController.query(String query, String endpoint)
+```
+link to [this request](http://localhost:9000/api/sparql?query=select+distinct+*+where+%7B+%3Chttp%3A%2F%2Fja.dbpedia.org%2Fresource%2F%E6%9D%B1%E4%BA%AC%E9%83%BD%3E+%3Fp+%3Fo+.++%7D+LIMIT+10&endpoint=http://ja.dbpedia.org/sparql) example.
+
 ## The Play application layout 
 The layout of a Play application is standardized to keep things as simple as possible. After a first successful compile, a Play application looks like this:
 ```
@@ -49,11 +55,6 @@ target                          ->  Generated stuff
 test                            -> source folder for unit or functioonal tests
 ```
 detail information is [here](https://www.playframework.com/documentation/2.5.x/Anatomy).
-## SPARQL Querying 
-```
-GET /api/sparql controllers.SPARQLController.query(String query, String endpoint)
-```
-link to [this request](http://localhost:9000/api/sparql?query=select+distinct+*+where+%7B+%3Chttp%3A%2F%2Fja.dbpedia.org%2Fresource%2F%E6%9D%B1%E4%BA%AC%E9%83%BD%3E+%3Fp+%3Fo+.++%7D+LIMIT+10&endpoint=http://ja.dbpedia.org/sparql) example.
 
 ## How to implement?
 Basically, we are implementing some feature in `app` directory. The `app` directory contains all executable artifacts: Java and Scala source code, templates and compiled assets' sources. 
