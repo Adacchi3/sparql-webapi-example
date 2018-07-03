@@ -51,7 +51,7 @@ public                          -> Public assets
 ├── images                      -> Image files
 ├── javascripts                 -> Javascript files
 └── stylesheets                 -> CSS files
-target                          ->  Generated stuff
+target                          -> Generated stuff
 test                            -> source folder for unit or functioonal tests
 ```
 detail information is [here](https://www.playframework.com/documentation/2.5.x/Anatomy).
