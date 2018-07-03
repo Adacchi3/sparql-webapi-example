@@ -19,6 +19,31 @@ $activator run
 ```
 link to [http://localhost:9000](http://localhost:9000)
 
+## The Play application layout 
+The layout of a Play application is standardized to keep things as simple as possible. After a first successful compile, a Play application looks like this:
+```
+README.md                       -> This document
+app                             -> Application sources
+├── controllers                 -> Application controllers
+├── utils                       -> Application utilities
+└── views                       -> Templates
+build.sbt                       -> Application bulid script
+conf                            -> Configurations files and other non-compiled resources (on classpath)
+├── application.conf            -> Main configuration file
+└── routes                      -> Routes definition
+libexec                         -> Unmanaged libraries dependencies
+logs                            -> Logs folder
+project                         -> sbt configuratoin files
+├── build.properties            -> Market for sbt project
+├── plugins.sbt                 -> sbt plugins including the declaration for Play itself
+public                          -> Public assets
+├── images                      -> Image files
+├── javascripts                 -> Javascript files
+└── stylesheets                 -> CSS files
+target                          ->  Generated stuff
+test                            -> source folder for unit or functioonal tests
+```
+detail information is [here](https://www.playframework.com/documentation/2.5.x/Anatomy).
 ## SPARQL Querying 
 ```
 GET /api/sparql controllers.SPARQLController.query(String query, String endpoint)
