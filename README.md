@@ -17,6 +17,11 @@ $git clone https://github.com/Adacchi3/sparql-webapi-example.git
 $cd sparql-webapi-example 
 $activator run  
 ```
+or
+```
+$cd sparql-webapi-example 
+$sbt run
+```
 link to [http://localhost:9000](http://localhost:9000)
 
 ## The Play application layout 
@@ -49,3 +54,10 @@ detail information is [here](https://www.playframework.com/documentation/2.5.x/A
 GET /api/sparql controllers.SPARQLController.query(String query, String endpoint)
 ```
 link to [this request](http://localhost:9000/api/sparql?query=select+distinct+*+where+%7B+%3Chttp%3A%2F%2Fja.dbpedia.org%2Fresource%2F%E6%9D%B1%E4%BA%AC%E9%83%BD%3E+%3Fp+%3Fo+.++%7D+LIMIT+10&endpoint=http://ja.dbpedia.org/sparql) example.
+
+## How to implement?
+Basically, we are implementing some feature in `app` directory. The `app` directory contains all executable artifacts: Java and Scala source code, templates and compiled assets' sources. 
+
+There are some packages in the `app` directory, one for each component of the MVC architectural pattern. 
+
+You can of course add your own packages, for example an `app/models` packages.
