@@ -7,6 +7,7 @@ GET     /                           controllers.HomeController.index
 
 # An example controller querying from a getting endpoint by using a getting query 
 GET     /api/sparql                 controllers.SPARQLController.query(query: String, endpoint: String)
+GET     /api/hoge                   controllers.LatLngController.distinguish(lat: Float, lng: Float)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

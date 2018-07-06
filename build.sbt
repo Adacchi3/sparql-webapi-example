@@ -10,5 +10,7 @@ libraryDependencies ++= Seq(
   javaJdbc,
   cache,
   javaWs,
-  "org.apache.jena" % "jena-arq" % "3.6.0"
+  "org.apache.jena" % "jena-arq" % "3.6.0",
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.9.6",
+  "com.fasterxml.jackson.core" % "jackson-annotations" % "2.9.6"
 )
